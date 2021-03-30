@@ -3,6 +3,7 @@ import React, { PureComponent } from 'react'
 import ReactDom from 'react-dom'
 import styles from './index.module.less'
 import img from './images/2.gif'
+import './tapable/index'
 export default class Jsx extends PureComponent {
   render() {
     return (
