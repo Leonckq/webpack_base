@@ -1,1 +1,3 @@
-import './tapable.js'
+// import './SyncHook.js'
+// import './SyncBailHook'
+import './SyncWaterfallHook'
