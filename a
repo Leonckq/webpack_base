@@ -1,0 +1,39 @@
+function fn (nums, target) {
+  let map = {}
+  for(let i = 0; i < nums.length; i++) {
+    if (map[nums[i]] !== void 0) {
+      return [map[nums[i]], i]
+    } else {
+      let temp = target - nums[i]
+      map[temp] = i
+    }
+  }
+  return -1
+}
+console.log(fn([2,7,11,15], 9))
+
+
+function fn(str) {
+  const leftMap = {
+    '(': ')',
+    '[': ']',
+    '{': '}'
+  }
+  const stack = []
+  for (let i = 0; i < str.length; i++) {
+    const temp = leftMap[str[i]]
+    if (temp) {
+      stack.push(temp)
+    } else {
+      const tempStr = stack.pop()
+      if (tempStr === str[i]) {
+        continue
+      } else {
+        stack.push(tempStr)
+      }
+    }
+  }
+  return stack.length === 0
+}
+
+console.log(fn('({})'))
